@@ -9,6 +9,7 @@ public class Ej2App {
 	public static void main(String[] args) {
 
 		MyConnectionManager cm = new MyConnectionManager();
+		String dbName = "java_empleados";
 		String user = "root";
 		String pwd = "root";
 		String query = "";
@@ -16,10 +17,10 @@ public class Ej2App {
 
 		//Conectarse al servidor mysql y crear la base de datos
 		cm.startConnection(user, pwd);
-		cm.createDB("java_empleados");
+		cm.createDB(dbName);
 		
 		//Conectarse a la base de datos
-		cm.startConnectionDB(user, pwd, "java_empleados");
+		cm.startConnectionDB(user, pwd, dbName);
 		
 		//Crear la tabla departamento
 		query = "create table departamento("
@@ -120,6 +121,7 @@ public class Ej2App {
 		} catch (SQLException e) {
 			System.out.println("No hay resultados");
 		}
+		
 		cm.closeConnection();
 
 	}
