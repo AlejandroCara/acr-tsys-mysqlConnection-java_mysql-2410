@@ -120,6 +120,7 @@ public class Ej3App {
 				System.out.println("Almacen: " + results.getString("almacen"));
 				System.out.println();
 			}
+
 		} catch (SQLException e) {
 			System.out.println("No hay resultados");
 		}
