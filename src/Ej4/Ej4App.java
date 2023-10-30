@@ -64,7 +64,7 @@ public class Ej4App {
 
 		System.out.println("\n\n");
 		
-		//Consultar todos los cajas
+		//Consultar todas las salas
 		query = "select *"
 			  + "from sala;";
 		results = cm.getValues(query);
@@ -83,7 +83,7 @@ public class Ej4App {
 		System.out.println("\n\n");
 		System.out.println("\n\n");
 		
-		//Consultar todos los almacenes
+		//Consultar todas las peliculas
 		query = "select *"
 			  + "from pelicula;";
 		results = cm.getValues(query);
